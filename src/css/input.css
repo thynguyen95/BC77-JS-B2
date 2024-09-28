@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text {
+  @apply text-red-500;
+}
+
+.title__main {
+  @apply text-center bg-black text-white p-4;
+}
+
+.style {
+  @apply bg-yellow-400 p-4 text-center;
+}
