@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="./css/output.css" />
   </head>
   <body>
-    <div class="container">
+    <button id="darkMode" class="bg-green-500 p-4">dark mode</button>
+
+    <div class="container dark:bg-yellow-400">
       <h2 class="title">Demo Dom</h2>
       <p id="text">Lorem ipsum dolor sit amet.</p>
 
@@ -50,7 +52,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container dark:bg-yellow-400">
       <h3 class="title__main">Bài tập bật, tắt đèn</h3>
 
       <div class="flex items-center justify-center mt-5">
@@ -60,6 +62,23 @@
         </div>
         <button id="batDen" class="bg-black text-white p-4" >Bật đèn</button>
       </div>
+    </div>
+
+    <div class="container mt-6 dark:bg-yellow-400">
+      <h3 class="title__main mb-5">Demo create element by js</h3>
+
+      <p>1. Nhập nội dung vào input</p>
+      <p>2. click vào button tạo ra 1 thẻ p có nội dung vừa nhập vào input</p>
+      <p>3. in thẻ p ra màn hình </p>
+
+      <div id="content" class="bg-gray-500 p-4 ">
+          <input type="text" id="textContent">
+          <button id="createTagP" class="bg-green-600 p-4">Tạo 1 thẻ p với nội dung bất kì</button>
+
+          <button id="hanldeBackground" class="bg-green-500 p-4 mt-5">Click me change background</button>
+      </div>
+
+      
     </div>
 
     <br><br><br><br><br>

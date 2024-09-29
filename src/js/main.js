@@ -168,3 +168,57 @@ batDen.addEventListener("click", hanldeBatDen);
 tatDen.addEventListener("click", function () {
   image.src = "./images/pic_bulboff.gif";
 });
+
+//------------- create element ---------//
+/*
+  cú pháp: document.createElement('tagName');
+  đưa thẻ vừa tạo lên giao diện:
+    document.querySelector('id').appendChild(tag);
+
+    khi sử dụng appendChild: 
+    1. nơi mà cần in thẻ html vào (id, class, div)
+    2. thẻ mà mình cần in
+*/
+let button = document.querySelector("#createTagP");
+
+// button.onclick
+button.addEventListener("click", function () {
+  console.log("clicked btn");
+
+  //tạo tag P
+  let tagP = document.createElement("p");
+  console.log("tagP: ", tagP);
+
+  // gán nội dung cho tag P
+  let textContent = document.querySelector("#textContent").value;
+  tagP.innerHTML = textContent;
+  console.log("tagP đã thêm nội dung: ", tagP);
+
+  // đưa tag P lên giao diện
+  let content = document.querySelector("#content");
+  content.appendChild(tagP);
+});
+
+document.querySelector("#hanldeBackground").onclick = function (event) {
+  // khi gọi sự kiện thì sự kiện sẽ trả về 1 event
+  // event: sự kiện event là chính thẻ mà gọi sự kiện
+  console.log("change bg", event);
+
+  let content = document.querySelector("#content");
+  // content.style.background = "red";
+  // content.classList.remove("bg-gray-500");
+  // content.classList.add("bg-red-500");
+  // content.className += "bg-red-500";
+
+  let targetBtn = event.target;
+  console.log("targetBtn: ", targetBtn);
+  // targetBtn.parentElement.parentElement.style.background = "red";
+  targetBtn.closest("#content").style.background = "red";
+};
+
+// xử lý dark mode
+document.querySelector("#darkMode").onclick = function () {
+  console.log("dark mode");
+
+  document.querySelector("body").classList.toggle("dark");
+};
